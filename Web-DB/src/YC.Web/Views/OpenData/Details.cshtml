@@ -1,0 +1,57 @@
+﻿@model YC.Models.OpenData
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <h2>Details</h2>
+
+    <div class="card border-light mb-3" style="max-width: 1800rem;">
+       
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.訓練項目)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.訓練項目)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.訓練部位)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.訓練部位)
+
+            <dt>
+                @Html.DisplayNameFor(model => model.組數)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.組數)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.每組次數)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.每組次數)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.日期)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.日期)
+            </dd>
+
+
+
+
+            </dd>
+        </dl>
+    </divclass="card>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>

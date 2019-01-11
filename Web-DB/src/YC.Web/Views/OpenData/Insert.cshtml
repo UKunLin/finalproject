@@ -1,0 +1,50 @@
+﻿@model YC.Models.OpenData
+
+@{
+    ViewData["Title"] = "Insert";
+}
+
+<h2>Insert</h2>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Insert">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="訓練項目" class="control-label"></label>
+                <input asp-for="訓練項目" class="form-control" />
+                <span asp-validation-for="訓練項目" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="訓練部位" class="control-label"></label>
+                <input asp-for="訓練部位" class="form-control" />
+                <span asp-validation-for="訓練部位" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="組數" class="control-label"></label>
+                <input asp-for="組數" class="form-control" />
+                <span asp-validation-for="組數" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="每組次數" class="control-label"></label>
+                <input asp-for="每組次數" class="form-control" />
+                <span asp-validation-for="每組次數" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="日期" class="control-label"></label>
+                <input asp-for="日期" class="form-control" />
+                <span asp-validation-for="日期" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-warning" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

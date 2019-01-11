@@ -1,0 +1,59 @@
+﻿@model List<YC.Models.OpenData>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card text-white bg-info mb-3" style="max-width: 1800rem;">
+    <h1><I>健人筆記</I></h1>
+
+    <form action="/OpenData/Search">
+        <p>
+            <input type="search" name="search" value="" />
+            <input type="submit" value="搜尋" />
+        </p>
+    </form>
+
+
+    <table class="table">
+        <thead lang="en">
+            <tr>
+
+
+                <th>訓練項目</th>
+                <th>訓練部位</th>
+                <th>組數</th>
+                <th>每組次數</th>
+                <th>日期</th>
+
+                <td>
+
+                    <a class="btn btn-info" href="/OpenData/Insert">新增</a>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>@item.訓練項目</td>
+                    <td>@item.訓練部位</td>
+                    <td>@item.組數</td>
+                    <td>@item.每組次數</td>
+                    <td>@item.日期</td>
+                    <td>
+                        <a class="btn btn-warning" href="/OpenData/Details/@item.id">詳細</a>
+                        <a class="btn btn-success" href="/OpenData/Edit/@item.id">編輯</a>
+                        <a class="btn btn-danger" href="/OpenData/Delete/@item.id">刪除</a>
+                    </td>
+                </tr>
+            }
+
+
+        </tbody>
+
+
+
+    </table>
+
+</div>

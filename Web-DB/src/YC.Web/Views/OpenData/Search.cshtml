@@ -1,0 +1,49 @@
+﻿@model List<YC.Models.OpenData>
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h2>Search</h2>
+
+<table class="table">
+    <thead lang="en">
+        <tr>
+
+
+            <th>訓練項目</th>
+            <th>訓練部位</th>
+            <th>組數</th>
+            <th>每組次數</th>
+            <th>日期</th>
+
+            <td>
+
+                
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.訓練項目</td>
+                <td>@item.訓練部位</td>
+                <td>@item.組數</td>
+                <td>@item.每組次數</td>
+                <td>@item.日期</td>
+
+            </tr>
+        }
+            
+
+    </tbody>
+    
+
+
+
+</table>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
